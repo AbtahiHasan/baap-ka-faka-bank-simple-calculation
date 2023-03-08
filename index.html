@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
     <title>baap er bank</title>
 </head>
 <body>
@@ -26,23 +27,43 @@
                 <p>$<span>00</span></p>
             </article>
         </section>
+        
         <!-- deposit and withdraw  -->
-        <section class="grid md:grid-cols-2 gap-5 mt-5 mx-2">
-            <div>
-                <form class="flex flex-col p-5 rounded-xl gap-5 bg-teal-600">
-                    <h2 class="text-xl font-bold">deposit Monkey</h2>
-                    <input type="text" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="deposit Monkey">
-                    <button class="bg-sky-700 p-2">deposit</button>
-                </form>
+        <section class="md:w-1/2 mx-2 md:mx-auto mt-10 bg-slate-900 rounded-lg text-white">
+            <div class="mb-4 border-b border-gray-200 dark:border-gray-700 text-black">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="deposit-tab" data-tabs-target="#deposit" type="button" role="tab" aria-controls="deposit" aria-selected="false">deposit</button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" id="withdraw-tab" data-tabs-target="#withdraw" type="button" role="tab" aria-controls="withdraw" aria-selected="false">withdraw</button>
+                    </li>
+                </ul>
             </div>
-            <div>
-                <form class="flex flex-col p-5 rounded-xl gap-5 bg-teal-600">
-                    <h2 class="text-xl font-bold">withdraw Monkey</h2>
-                    <input type="text" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="withdraw Monkey">
-                    <button class="bg-sky-700 p-2">withdraw</button>
-                </form>
+            <div id="myTabContent">
+                <div class="hidden p-4 rounded-lg" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
+                    <div>
+                        <form class="flex flex-col p-5 rounded-xl gap-5 ">
+                            <h2 class="text-xl font-bold">deposit Monkey</h2>
+                            <input type="text" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="deposit Monkey">
+                            <button class="bg-sky-700 p-2">deposit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="hidden p-4 rounded-lg " id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
+                    <div>
+                        <form class="flex flex-col p-5 rounded-xl gap-5">
+                            <h2 class="text-xl font-bold">withdraw Monkey</h2>
+                            <input type="text" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="withdraw Monkey">
+                            <button class="bg-sky-700 p-2">withdraw</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
+        
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
     </main>
 </body>
 </html>
