@@ -20,6 +20,7 @@ const withdraw = (e) => {
     const total = previusTotal - inputValue;
     if(previusTotal < inputValue) {
         alert("baki taka ki akash thake porbe naki");
+        return
     }
     setValue("withdraw-total", totalWithdraw)
     setValue("total", total)    

@@ -10,6 +10,7 @@ export const inputMoney = (id) => {
     }
     else {
     const inputStrVal = input.value;
+    input.value = "";
     return parseFloat(inputStrVal)
     }
     input.value = "";
@@ -18,7 +19,6 @@ export const inputMoney = (id) => {
 export const textMoney = (id) => {
     const spanTag = document.getElementById(id),
     spanTagStrVal = spanTag.innerText;
-    spanTag.value = "";
     return parseFloat(spanTagStrVal)
 }
 export const setValue = (id, value) => {
