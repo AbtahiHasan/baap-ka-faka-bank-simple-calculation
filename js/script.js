@@ -3,8 +3,6 @@ import {inputMoney, textMoney,  setValue} from "./utilities.js";
 const depositForm = document.getElementById("deposit-form"),
     withdrawForm = document.getElementById("withdraw-form");
 
-
-
 const deposit = (e) => {
     e.preventDefault();
     const previusTotal = textMoney("deposit-total"),
@@ -20,6 +18,9 @@ const withdraw = (e) => {
     inputValue = inputMoney("withdraw-input");
     const totalWithdraw = previusWithdrawTotal + inputValue;
     const total = previusTotal - inputValue;
+    if(previusTotal < inputValue) {
+        alert("baki taka ki akash thake porbe naki");
+    }
     setValue("withdraw-total", totalWithdraw)
     setValue("total", total)    
 }
