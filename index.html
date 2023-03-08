@@ -16,15 +16,15 @@
             <!-- cards -->
             <article class="bg-sky-500 p-5 rounded-xl">
                 <h2 class="text-xl">deposit</h2>
-                <p>$<span>00</span></p>
+                <p>$<span id="deposit-total">00</span></p>
             </article>
             <article class="bg-indigo-700 p-5 rounded-xl">
                 <h2 class="text-xl">withdraw</h2>
-                <p>$<span>00</span></p>
+                <p>$<span id="withdraw-total">00</span></p>
             </article>
             <article class="bg-lime-600 p-5 rounded-xl">
                 <h2 class="text-xl">Total</h2>
-                <p>$<span>00</span></p>
+                <p>$<span id="total">00</span></p>
             </article>
         </section>
         
@@ -43,18 +43,18 @@
             <div id="myTabContent">
                 <div class="hidden p-4 rounded-lg" id="deposit" role="tabpanel" aria-labelledby="deposit-tab">
                     <div>
-                        <form class="flex flex-col p-5 rounded-xl gap-5 ">
+                        <form id="deposit-form" class="flex flex-col p-5 rounded-xl gap-5 ">
                             <h2 class="text-xl font-bold">deposit Monkey</h2>
-                            <input type="text" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="deposit Monkey">
+                            <input type="text" id="deposit-input" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="deposit Monkey">
                             <button class="bg-sky-700 p-2">deposit</button>
                         </form>
                     </div>
                 </div>
                 <div class="hidden p-4 rounded-lg " id="withdraw" role="tabpanel" aria-labelledby="withdraw-tab">
                     <div>
-                        <form class="flex flex-col p-5 rounded-xl gap-5">
+                        <form id="withdraw-form" class="flex flex-col p-5 rounded-xl gap-5">
                             <h2 class="text-xl font-bold">withdraw Monkey</h2>
-                            <input type="text" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="withdraw Monkey">
+                            <input type="text" id="withdraw-input" class="p-2 text-black border-0 outline-none" autocomplete="off" placeholder="withdraw Monkey">
                             <button class="bg-sky-700 p-2">withdraw</button>
                         </form>
                     </div>
@@ -64,6 +64,7 @@
         
 
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+                <script type="module" src="./js/script.js"></script>
     </main>
 </body>
 </html>
